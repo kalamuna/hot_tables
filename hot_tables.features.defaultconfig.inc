@@ -11,6 +11,8 @@ function hot_tables_defaultconfig_features() {
   return array(
     'hot_tables' => array(
       'field_default_fields' => 'field_default_fields',
+      'strongarm' => 'strongarm',
+      'user_default_permissions' => 'user_default_permissions',
     ),
   );
 }
@@ -47,6 +49,10 @@ function hot_tables_defaultconfig_field_default_fields() {
       'default_value' => array(
         0 => array(
           'tablefield' => array(
+            'accessibility' => array(
+              'caption' => '',
+              'summary' => '',
+            ),
             'cell_0_0' => '',
             'cell_0_1' => '',
             'cell_0_2' => '',
@@ -82,6 +88,7 @@ function hot_tables_defaultconfig_field_default_fields() {
               'rebuild' => 'Rebuild Table',
             ),
           ),
+          'format' => 'panopoly_html_text',
         ),
       ),
       'deleted' => 0,
@@ -187,4 +194,83 @@ function hot_tables_defaultconfig_field_default_fields() {
   t('Table');
 
   return $fields;
+}
+
+/**
+ * Implements hook_defaultconfig_strongarm().
+ */
+function hot_tables_defaultconfig_strongarm() {
+  $export = array();
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_fieldable_panels_pane__hot_table';
+  $strongarm->value = array(
+    'view_modes' => array(
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
+    'extra_fields' => array(
+      'form' => array(
+        'title' => array(
+          'weight' => '0',
+        ),
+      ),
+      'display' => array(
+        'title' => array(
+          'default' => array(
+            'weight' => '-5',
+            'visible' => TRUE,
+          ),
+        ),
+      ),
+    ),
+  );
+  $export['field_bundle_settings_fieldable_panels_pane__hot_table'] = $strongarm;
+
+  return $export;
+}
+
+/**
+ * Implements hook_defaultconfig_user_default_permissions().
+ */
+function hot_tables_defaultconfig_user_default_permissions() {
+  $permissions = array();
+
+  // Exported permission: 'create fieldable hot_table'.
+  $permissions['create fieldable hot_table'] = array(
+    'name' => 'create fieldable hot_table',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+    ),
+    'module' => 'fieldable_panels_panes',
+  );
+
+  // Exported permission: 'delete fieldable hot_table'.
+  $permissions['delete fieldable hot_table'] = array(
+    'name' => 'delete fieldable hot_table',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+    ),
+    'module' => 'fieldable_panels_panes',
+  );
+
+  // Exported permission: 'edit fieldable hot_table'.
+  $permissions['edit fieldable hot_table'] = array(
+    'name' => 'edit fieldable hot_table',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+    ),
+    'module' => 'fieldable_panels_panes',
+  );
+
+  return $permissions;
 }

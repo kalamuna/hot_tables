@@ -16,6 +16,10 @@ function hot_tables_field_default_field_instances() {
     'default_value' => array(
       0 => array(
         'tablefield' => array(
+          'accessibility' => array(
+            'caption' => '',
+            'summary' => '',
+          ),
           'cell_0_0' => '',
           'cell_0_1' => '',
           'cell_0_2' => '',
@@ -51,6 +55,7 @@ function hot_tables_field_default_field_instances() {
             'rebuild' => 'Rebuild Table',
           ),
         ),
+        'format' => 'panopoly_html_text',
       ),
     ),
     'deleted' => 0,
