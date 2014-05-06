@@ -49,50 +49,31 @@ function hot_tables_defaultconfig_field_default_fields() {
       'default_value' => array(
         0 => array(
           'tablefield' => array(
-            'accessibility' => array(
-              'caption' => '',
-              'summary' => '',
-            ),
+            'caption' => '',
             'cell_0_0' => '',
             'cell_0_1' => '',
             'cell_0_2' => '',
-            'cell_0_3' => '',
-            'cell_0_4' => '',
             'cell_1_0' => '',
             'cell_1_1' => '',
             'cell_1_2' => '',
-            'cell_1_3' => '',
-            'cell_1_4' => '',
             'cell_2_0' => '',
             'cell_2_1' => '',
             'cell_2_2' => '',
-            'cell_2_3' => '',
-            'cell_2_4' => '',
-            'cell_3_0' => '',
-            'cell_3_1' => '',
-            'cell_3_2' => '',
-            'cell_3_3' => '',
-            'cell_3_4' => '',
-            'cell_4_0' => '',
-            'cell_4_1' => '',
-            'cell_4_2' => '',
-            'cell_4_3' => '',
-            'cell_4_4' => '',
             'import' => array(
               'rebuild_field_hot_table_0' => 'Upload CSV',
               'tablefield_csv_field_hot_table_0' => '',
             ),
             'rebuild' => array(
-              'count_cols' => 5,
-              'count_rows' => 5,
+              'count_cols' => 3,
+              'count_rows' => 3,
               'rebuild' => 'Rebuild Table',
             ),
           ),
-          'format' => 'panopoly_html_text',
+          'format' => 'plain_text',
         ),
       ),
       'deleted' => 0,
-      'description' => '',
+      'description' => '<p>The purpose of tables is to present information in a grid, or matrix, and to have column or rows that show the meaning of the information in the grid, please do not use tables for <em>presentation</em>. Learn more from <a href="http://webaim.org/techniques/tables/data">WebAIM: Creating Accessible Tables</a></p>',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
@@ -191,6 +172,7 @@ function hot_tables_defaultconfig_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('<p>The purpose of tables is to present information in a grid, or matrix, and to have column or rows that show the meaning of the information in the grid, please do not use tables for <em>presentation</em>. Learn more from <a href="http://webaim.org/techniques/tables/data">WebAIM: Creating Accessible Tables</a></p>');
   t('Table');
 
   return $fields;
