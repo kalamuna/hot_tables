@@ -1,0 +1,14 @@
+name = HotTables!
+description = Creates embedable tables to show data on your site!
+core = 7.x
+package = Widgets
+version = 7.x-1.0-beta1
+project = hot_tables
+dependencies[] = features
+dependencies[] = tablefield
+features[defaultconfig][] = field_default_fields:fieldable_panels_pane-hot_table-field_hot_table
+features[defaultconfig][] = field_default_fields:fieldable_panels_pane-table-field_basic_table_table
+features[features_api][] = api:2
+features[field_base][] = field_hot_table
+features[field_instance][] = fieldable_panels_pane-hot_table-field_hot_table
+features_exclude[dependencies][defaultconfig] = defaultconfig
