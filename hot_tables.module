@@ -13,7 +13,7 @@ function hot_tables_entity_info_alter(&$entity_info){
   // Basic table
   $entity_info['fieldable_panels_pane']['bundles']['hot_table'] = array(
     'label' => t('Table'),
-    'pane category' => t('Widgets'),
+    'pane category' => t('HotWidgets!'),
     'pane top level' => FALSE,
     'pane icon' => drupal_get_path('module', 'hot_tables') . '/images/icon_table.png',
     'admin' => array(
