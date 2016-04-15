@@ -10,13 +10,12 @@
 function hot_tables_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'fieldable_panels_pane-hot_table-field_hot_table'
+  // Exported field_instance: 'fieldable_panels_pane-hot_table-field_hot_table'.
   $field_instances['fieldable_panels_pane-hot_table-field_hot_table'] = array(
     'bundle' => 'hot_table',
     'default_value' => array(
       0 => array(
         'tablefield' => array(
-          'caption' => '',
           'cell_0_0' => '',
           'cell_0_1' => '',
           'cell_0_2' => '',
@@ -26,13 +25,16 @@ function hot_tables_field_default_field_instances() {
           'cell_2_0' => '',
           'cell_2_1' => '',
           'cell_2_2' => '',
+          'cell_3_0' => '',
+          'cell_3_1' => '',
+          'cell_3_2' => '',
           'import' => array(
-            'rebuild_field_hot_table_0' => 'Upload CSV',
-            'tablefield_csv_field_hot_table_0' => '',
+            'file' => '',
+            'import' => 'Upload CSV',
           ),
           'rebuild' => array(
             'count_cols' => 3,
-            'count_rows' => 3,
+            'count_rows' => 4,
             'rebuild' => 'Rebuild Table',
           ),
         ),
@@ -46,10 +48,11 @@ function hot_tables_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'tablefield',
         'settings' => array(),
-        'type' => 'default',
+        'type' => 'tablefield_default',
         'weight' => 0,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'fieldable_panels_pane',
     'field_name' => 'field_hot_table',
     'label' => 'Table',
